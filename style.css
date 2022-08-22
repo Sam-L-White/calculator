@@ -5,7 +5,8 @@
     border-color: black;
     border-width: 2px;
     height: 500px;
-    width: 500px;
+    width: 400px;
+    background-color: #20333d;
 }
 
 .calculator .display{
@@ -15,6 +16,11 @@
     border-bottom-width: 2px;
     height: 100px;
     width: 500px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #cccdc5;
     
 }
 .buttons{
@@ -30,8 +36,9 @@
     width: 400px;
     height: 75px;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .row div{
@@ -45,8 +52,26 @@
     width: 100px;
     height: 75px;
     font-size: 40px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #e4ab3b;
+    border-radius: 20px;
     
     
 }
 
+.clear{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    width: 100px;
+    height: 50px;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #e4ab3b;
+    border-radius: 20px;
+}
+    
