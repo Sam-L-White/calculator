@@ -141,12 +141,18 @@ function divide(numOne, numTwo){
 buttons.forEach(button => button.addEventListener('click', Calculator));
 
 function Calculator(e){
-
+    
+    const dotButton = document.querySelector("#dot")
+    
     const button = e.target.textContent;
-
+    if (button === "."){
+        dotButton.removeEventListener('click', Calculator)
+    }
     switch(button){
 
         case("+"):
+            
+            dotButton.addEventListener('click', Calculator)
 
             if (count > 0){
 
@@ -179,6 +185,9 @@ function Calculator(e){
         break;
 
         case("-"):
+
+            
+            dotButton.addEventListener('click', Calculator)
 
             if (count > 0){
 
@@ -213,6 +222,9 @@ function Calculator(e){
 
         case("x"):
 
+            
+            dotButton.addEventListener('click', Calculator)
+
             if (count > 0){
                 
                 if(equalcount > 0){
@@ -244,6 +256,9 @@ function Calculator(e){
         break;
 
         case("/"):
+
+            
+            dotButton.addEventListener('click', Calculator)
 
             if (count > 0){
     
@@ -277,6 +292,9 @@ function Calculator(e){
 
         case("="):
 
+            
+            dotButton.addEventListener('click', Calculator)
+
             if (equalcount === 0){
 
                 equalcount++
@@ -296,6 +314,18 @@ function Calculator(e){
 
             display.textContent = display.textContent + button
             numTwo = display.textContent
-            result = operate(numOne, numTwo, operator)       
+            if(operator === "/" && numTwo == 0){
+                alert("Cannot Divide by 0, try again")
+                display.textContent = ""
+                count = 0
+                equalcount = 0
+                numOne = ""
+                numTwo = ""
+                operating = "false"
+                operator = ""
+            } else {
+                result = operate(numOne, numTwo, operator)   
+            }
+                
     }   
 }
